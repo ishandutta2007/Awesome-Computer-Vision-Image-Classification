@@ -32,79 +32,30 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
 - [Open-Source GitHub Projects](#open-source-github-projects)
-
 - [How to Contribute](#how-to-contribute)
-
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
 
+The global computer vision market is estimated at approximately $23B to $33B in 2025–2026, projected to surpass $80B–$100B+ into the mid-2030s at a CAGR of ~15%–19%. The sector exhibits **moderate concentration / fragmentation**: while core foundational models and cloud compute APIs are concentrated among hyperscale cloud providers (Microsoft, Alphabet, Amazon), the broader ecosystem is fragmented across specialized platforms for visual inspection, data-centric annotation, and domain-specific classification.
 
 ## SaaS/Hosted Platforms
 
-
-
-- **[Salesforce Einstein Image Classification](https://www.salesforce.com/)**  
-
-  Einstein Vision service enabling developers to build deep learning models for image classification and object detection. Supports multi-label classification and custom training with your own datasets. Integrates directly with Salesforce CRM workflows .
-
-
-
-- **[Google Cloud Vision](https://cloud.google.com/vision)**  
-
-  Pre-trained and customizable computer vision models for image classification, object detection, OCR, and content moderation. Label detection returns recognized labels with confidence and topicality scores. Python, Go, and Java client libraries available .
-
-
-
-- **[AWS Rekognition](https://aws.amazon.com/rekognition/)**  
-
-  Deep learning-based image and video analysis service. Features object/scene detection, text detection, unsafe content moderation, celebrity recognition, facial analysis, and Custom Labels for training classifiers on proprietary objects .
-
-
-
-- **[Azure Computer Vision](https://azure.microsoft.com/en-us/products/ai-services/ai-vision)**  
-
-  Prebuilt and customizable models for image analysis, tagging, caption generation, and domain-specific detection (celebrities, landmarks). Supports custom model training with your own images .
-
-
-
-- **[Clarifai](https://www.clarifai.com/)**  
-
-  Production tagging platform with model training and customization. Supports versioned models for repeatable inference baselines and configurable threshold governance for audit-ready deployments .
-
-
-
-- **[Roboflow](https://roboflow.com/)**  
-
-  Dataset preparation and deployment platform with versioning and managed annotation workflows. Preserves traceability into training exports for controlled label iteration .
-
-
-
-- **[Landing AI](https://landing.ai/)**  
-
-  Computer vision platform focused on data-centric AI. Provides tools for visual inspection, defect detection, and model deployment for industrial and enterprise use cases .
-
-
-
-- **[Nyckel](https://www.nyckel.com/)**  
-
-  No-code AI platform for image and text classification. Provides dataset management, training, and evaluation controls tied to iterative model updates for controlled change behavior .
-
-
-
-- **[V7 Go](https://www.v7labs.com/)**  
-
-  AI-powered document and image analysis platform. Combines computer vision with document understanding for automated data extraction and classification workflows .
-
-
-
-- **[Scale AI](https://scale.com/)**  
-
-  Data platform for AI with annotation, curation, and model evaluation services. Supports computer vision teams with training data pipelines for classification and detection models.
-
-
+| Platform | Company | Company Scale (Market Cap / Valuation / Revenue) | Description | Pricing (Starting Paid Tier) | Free Tier Limits |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **[Google Cloud Vision](https://cloud.google.com/vision)** | Alphabet / Google | ~$4.2T Market Cap (~$403B+ Rev) | Pre-trained and AutoML vision models for label detection, classification, OCR, and moderation. | $1.50 per 1,000 units (1,001–5,000,000 units/mo) | 1,000 units per month free forever (plus $300 new customer credit) |
+| **[Azure Computer Vision](https://azure.microsoft.com/en-us/products/ai-services/ai-vision)** | Microsoft | ~$3.9T Market Cap (~$331.8B Rev) | Prebuilt and customizable models for image tagging, classification, caption generation, and domain detection. | $1.00 per 1,000 transactions (Standard S1 tier) | 5,000 transactions per month (F0 Free Tier, max 20 calls/min) |
+| **[AWS Rekognition](https://aws.amazon.com/rekognition/)** | Amazon | ~$2.7T Market Cap (~$600B+ Rev) | Deep learning image & video analysis for object/scene classification, moderation, and Custom Labels. | $1.00 per 1,000 images analyzed (Tier 1: first 1M images/mo) | 5,000 images analyzed per month during the 12-month AWS Free Tier |
+| **[Salesforce Einstein Image Classification](https://www.salesforce.com/)** | Salesforce | ~$187B Market Cap (~$41.5B Rev) | Deep learning image classification and object detection service integrated with Salesforce CRM workflows. | $25/user/month (Starter Suite) to $500+/mo via Einstein add-on credits / Agentforce usage packs | 2,000 free prediction calls/month (developer tier historically) or 30-day trial |
+| **[Scale AI](https://scale.com/)** | Scale AI | ~$29B Valuation (~$1B Rev) | Data curation, automated labeling, and model evaluation platform for production classification pipelines. | $0.05 per labeling unit (Self-Serve pay-as-you-go above allowance) | 1,000 labeling units & 10,000 images in free self-serve tier |
+| **[Clarifai](https://www.clarifai.com/)** | Clarifai (Nebius) | ~$100M+ Raised / Acquired | Visual AI tagging and classification platform supporting custom model training and evaluation. | $30/month (Essential plan) | 1,000 operations (API calls) per month free forever (Community plan) |
+| **[Roboflow](https://roboflow.com/)** | Roboflow | ~$60M+ Raised | End-to-end computer vision platform with dataset versioning, auto-labeling, and model deployment. | $39/month billed annually ($99/month billed monthly, Core plan) | $60/month recurring credits (up to 10 projects, 250k public images) |
+| **[Landing AI](https://landing.ai/)** | Landing AI | ~$57M Raised (~$34.2M Rev) | Data-centric computer vision platform specialized in visual inspection, defect detection, and document extraction. | $250/month (Team plan) or $0.01 per extraction credit pay-as-you-go | 14-day free trial with 1,000 free credits |
+| **[V7 Go](https://www.v7labs.com/)** | V7 Labs | ~$33M–$36M Raised/Valuation | Multimodal AI platform combining computer vision with document understanding and classification workflows. | $5,400/year (Darwin Team) / custom annual contracts for V7 Go | Free forever plan with baseline Go Tokens allocation for workflows |
+| **[Nyckel](https://www.nyckel.com/)** | Nyckel | ~$3M Estimated Annual Rev | Quick-deploy API and no-code platform for custom image and text classification. | $149/month (Standard tier) | 1,000 classifications per month free forever |
 
 ## Open-Source GitHub Projects
 
