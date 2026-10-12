@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="40%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#4ade80" />
+    </linearGradient>
+
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+    </linearGradient>
+
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-10px) rotate(2deg); }
+      }
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(8px) rotate(-1.5deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.7; transform: scale(1.05); }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(0px); opacity: 0.2; }
+        50% { transform: translateY(220px); opacity: 0.7; }
+        100% { transform: translateY(0px); opacity: 0.2; }
+      }
+      @keyframes dashMove {
+        to { stroke-dashoffset: -40; }
+      }
+      .floating-card-1 {
+        animation: floatSlow 7s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .floating-card-2 {
+        animation: floatReverse 8s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .pulsing-node {
+        animation: pulseGlow 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .scanner-beam {
+        animation: scanline 6s ease-in-out infinite;
+      }
+      .flow-path {
+        stroke-dasharray: 6, 6;
+        animation: dashMove 3s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="340" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Technical Grid Background -->
+  <g opacity="0.12" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="180" x2="1200" y2="180" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="120" y1="0" x2="120" y2="340" />
+    <line x1="240" y1="0" x2="240" y2="340" />
+    <line x1="360" y1="0" x2="360" y2="340" />
+    <line x1="480" y1="0" x2="480" y2="340" />
+    <line x1="600" y1="0" x2="600" y2="340" />
+    <line x1="720" y1="0" x2="720" y2="340" />
+    <line x1="840" y1="0" x2="840" y2="340" />
+    <line x1="960" y1="0" x2="960" y2="340" />
+    <line x1="1080" y1="0" x2="1080" y2="340" />
+  </g>
+
+  <!-- Dynamic / Animated Background Visuals (Right Side - Computer Vision AI Reticle & Flow) -->
+  <g transform="translate(930, 160)" opacity="0.85">
+    <!-- Outer Focus Reticle Ring -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="12 18" opacity="0.4" class="flow-path" />
+    <circle cx="0" cy="0" r="85" fill="none" stroke="#818cf8" stroke-width="1.5" opacity="0.5" />
+    
+    <!-- Vision Bounding Box with animated scan -->
+    <g class="floating-card-1">
+      <rect x="-65" y="-65" width="130" height="130" rx="10" fill="#0f172a" fill-opacity="0.6" stroke="#38bdf8" stroke-width="2" />
+      <!-- Target Corner Brackets -->
+      <path d="M -65 -45 L -65 -65 L -45 -65" fill="none" stroke="#38bdf8" stroke-width="3.5" />
+      <path d="M 45 -65 L 65 -65 L 65 -45" fill="none" stroke="#38bdf8" stroke-width="3.5" />
+      <path d="M -65 45 L -65 65 L -45 65" fill="none" stroke="#38bdf8" stroke-width="3.5" />
+      <path d="M 45 65 L 65 65 L 65 45" fill="none" stroke="#38bdf8" stroke-width="3.5" />
+      
+      <!-- Classification Tag Inside Vision Target -->
+      <rect x="-55" y="-55" width="84" height="18" rx="4" fill="#38bdf8" fill-opacity="0.25" />
+      <text x="-50" y="-42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700" fill="#38bdf8">CONF: 99.8%</text>
+
+      <!-- Center Crosshair -->
+      <line x1="-12" y1="0" x2="12" y2="0" stroke="#c084fc" stroke-width="2" />
+      <line x1="0" y1="-12" x2="0" y2="12" stroke="#c084fc" stroke-width="2" />
+    </g>
+
+    <!-- Scanning line effect inside box -->
+    <line x1="-60" y1="-60" x2="60" y2="-60" stroke="#38bdf8" stroke-width="2" opacity="0.6" class="scanner-beam" />
+
+    <!-- Neural Floating Pill 1 -->
+    <g transform="translate(-130, -80)" class="floating-card-2" filter="url(#shadow)">
+      <rect x="0" y="0" width="135" height="34" rx="17" fill="#1e293b" fill-opacity="0.9" stroke="#818cf8" stroke-width="1.5" />
+      <circle cx="17" cy="17" r="6" fill="#4ade80" />
+      <text x="32" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#f1f5f9">ResNet / ViT</text>
+    </g>
+
+    <!-- Neural Floating Pill 2 -->
+    <g transform="translate(-150, 75)" class="floating-card-1" filter="url(#shadow)">
+      <rect x="0" y="0" width="150" height="34" rx="17" fill="#1e293b" fill-opacity="0.9" stroke="#c084fc" stroke-width="1.5" />
+      <circle cx="17" cy="17" r="6" fill="#38bdf8" />
+      <text x="32" y="22" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#f1f5f9">CNN • YOLO • CLIP</text>
+    </g>
+
+    <!-- Data Flowing Connector Curves -->
+    <path d="M -140 0 Q -80 -40 -30 -10" fill="none" stroke="url(#primaryGrad)" stroke-width="2" class="flow-path" />
+    <path d="M -130 50 Q -70 20 -20 30" fill="none" stroke="url(#accentGrad)" stroke-width="1.5" class="flow-path" />
+  </g>
+
+  <!-- Left / Center Content: Foreground Title & Subtitle (Clean and Clear) -->
+  <g transform="translate(70, 75)">
+    <!-- Category Pill -->
+    <g filter="url(#shadow)">
+      <rect x="0" y="0" width="280" height="28" rx="14" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1.2" />
+      <circle cx="14" cy="14" r="5" fill="#38bdf8" class="pulsing-node" />
+      <text x="28" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" fill="#38bdf8" letter-spacing="1">CURATED AWESOME ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="-0.5" filter="url(#shadow)">
+      Awesome Computer Vision
+    </text>
+    <text x="0" y="124" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="url(#primaryGrad)" letter-spacing="-0.5">
+      Image Classification 👁️⚡
+    </text>
+
+    <!-- Subtitle / Value Proposition -->
+    <text x="0" y="165" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">
+      Top Production SaaS Platforms • State-of-the-Art Deep Learning Frameworks • Pretrained Vision Transformers
+    </text>
+
+    <!-- Highlights Badges inside Banner -->
+    <g transform="translate(0, 185)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="130" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">🚀 SaaS Platforms</text>
+
+      <!-- Pill 2 -->
+      <rect x="140" y="0" width="150" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="152" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">📦 Pretrained Models</text>
+
+      <!-- Pill 3 -->
+      <rect x="300" y="0" width="145" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="312" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">⭐ Star-Sorted Repos</text>
+
+      <!-- Pill 4 -->
+      <rect x="455" y="0" width="145" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="467" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#cbd5e1">⚡ Real-time Inference</text>
+    </g>
+  </g>
+
+  <!-- Glowing Accent Border Line at Bottom -->
+  <line x1="0" y1="339" x2="1200" y2="339" stroke="url(#glowLine)" stroke-width="2" />
+</svg>
