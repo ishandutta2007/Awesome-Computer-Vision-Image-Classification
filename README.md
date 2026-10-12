@@ -70,7 +70,7 @@ The following SaaS platforms provide hosted computer vision APIs, automated tran
 
 ## 📦 Open-Source GitHub Projects
 
-Open-source libraries, pretrained backbones, benchmarks, and production inference engines for visual classification. Repositories are ranked in **descending order by GitHub star count**. Each badge links directly to the repository's stargazers page.
+Open-source libraries, pretrained backbones, benchmarks, and production inference engines for visual classification. Repositories are ranked in **descending order by GitHub Stars_Count**. Each badge links directly to the repository's stargazers page.
 
 1. **[TensorFlow](https://github.com/tensorflow/tensorflow)** [![Stars](https://img.shields.io/github/stars/tensorflow/tensorflow?style=social&color=white)](https://github.com/tensorflow/tensorflow/stargazers)  
    End-to-end open-source machine learning platform (Apache-2.0). Provides Keras high-level APIs for convolutional neural networks, transfer learning modules, and TensorFlow Lite / TF Serving for edge and server deployment.
